@@ -1,4 +1,4 @@
-name: empty
+name: rentcar
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0
@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cupertino_icons: ^1.0.2
+  http: ^1.3.0
 
 dev_dependencies:
   flutter_test:
