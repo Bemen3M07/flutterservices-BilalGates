@@ -4,6 +4,7 @@ import 'package:rentcar/model/joke_model.dart';
 class JokeService {
   final String baseUrl = 'https://api.sampleapis.com/jokes/goodJokes';
 
+  // Funció per obtenir un acudit aleatori de l'API
   Future<Joke> getRandomJoke() async {
     final response = await http.get(Uri.parse(baseUrl));
     if (response.statusCode == 200) {

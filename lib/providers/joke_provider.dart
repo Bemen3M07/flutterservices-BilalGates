@@ -3,14 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class JokeProvider extends ChangeNotifier {
+  // Variables per emmagatzemar l'acudit, l'estat de càrrega i els errors
   String _joke = "Prem el botó per veure un acudit!";
   bool _isLoading = false;
   String _error = "";
 
+  // Getters per accedir a les variables privades
   String get joke => _joke;
   bool get isLoading => _isLoading;
   String get error => _error;
 
+  // Funció per obtenir un acudit de l'API
   Future<void> fetchJoke() async {
     _isLoading = true;
     _error = "";

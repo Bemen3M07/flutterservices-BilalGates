@@ -11,6 +11,7 @@ class Joke {
     required this.status,
   });
 
+  // Crear un objecte Joke a partir d'un mapa
   factory Joke.fromMap(Map<String, dynamic> map) {
     return Joke(
       id: map['id'] ?? 0,
@@ -19,6 +20,7 @@ class Joke {
     );
   }
 
+  // Convertir un objecte Joke a un mapa
   Map<String, dynamic> toMap() {
     return {
       'id': id,
@@ -27,6 +29,8 @@ class Joke {
     };
   }
 
+  // Crear un objecte Joke a partir d'un JSON
   factory Joke.fromJson(String source) => Joke.fromMap(json.decode(source));
+  // Convertir un objecte Joke a un JSON
   String toJson() => json.encode(toMap());
 }

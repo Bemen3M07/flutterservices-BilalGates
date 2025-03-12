@@ -6,7 +6,9 @@ void main() {
   test('Test de connexió a l’API i obtenció de dades', () async {
     final service = CarService();
     final cars = await service.getCars();
+    // Comprova que la resposta és una llista d'objectes Car
     expect(cars, isA<List<Car>>());
+    // Comprova que la llista no està buida
     expect(cars.isNotEmpty, true);
   });
 }

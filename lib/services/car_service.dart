@@ -7,6 +7,7 @@ class CarService {
   static const String apiKey =
       "52367a615cmshb6741fadf598349p197353jsn1d8ec3c40405";
 
+  // Funció per obtenir la llista de cotxes de l'API
   Future<List<Car>> getCars() async {
     final response = await http.get(
       Uri.parse(apiUrl),

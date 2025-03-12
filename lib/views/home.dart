@@ -13,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    // Carrega la llista de cotxes quan s'inicialitza la pantalla
     Provider.of<CarProvider>(context, listen: false).loadCars();
   }
 
@@ -20,13 +21,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // Títol de la barra d'aplicació
         title: const Text('Llista de Cotxes'),
         actions: [
           IconButton(
             icon: const Icon(Icons.emoji_emotions), // Icona de broma
             onPressed: () {
-              Navigator.pushNamed(
-                  context, '/joke'); // Navegar a la pantalla d'acudits
+              // Navegar a la pantalla d'acudits
+              Navigator.pushNamed(context, '/joke');
             },
           ),
         ],
@@ -42,6 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 prefixIcon: const Icon(Icons.search),
               ),
               onChanged: (query) {
+                // Filtra la llista de cotxes segons la consulta de cerca
                 Provider.of<CarProvider>(context, listen: false)
                     .filterCars(query);
               },
