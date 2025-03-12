@@ -88,3 +88,8 @@ Per iniciar un nou projecte Flutter, el vídeo explica que cal obrir el terminal
 
 Afegint la següent línia de codi dins del widget MaterialApp o CupertinoApp:
 - debugShowCheckedModeBanner: false,
+
+---
+
+## Test
+![alt text](image.png)
